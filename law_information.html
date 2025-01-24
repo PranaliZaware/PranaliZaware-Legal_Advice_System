@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Penal Code - Law Information</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #0077cc;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 1.5rem;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .law-container {
+            margin: 30px auto;
+            padding: 20px;
+            width: 90%;
+            max-width: 800px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .law-selector {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .law-selector label {
+            font-size: 1.1rem;
+            margin-right: 10px;
+        }
+
+        #lawDropdown {
+            width: 70%;
+            max-width: 400px;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .law-info {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .law-info h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .law-info p, .law-info ul {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px 0;
+            background-color: #333;
+            color: white;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Indian Penal Code - Law Information</h1>
+    </header>
+    <main class="law-container">
+        <div class="law-selector">
+            <label for="lawDropdown">Select a Category:</label>
+            <select id="lawDropdown" onchange="displayLawInfo()">
+                <option value="">-- Select Category --</option>
+                <option value="state">Offenses Against the State</option>
+                <option value="religion">Offenses Relating to Religion</option>
+                <option value="humanBody">Offenses Against Human Body</option>
+                <option value="property">Offenses Against Property</option>
+                <option value="marriage">Offenses Relating to Marriage</option>
+                <option value="publicTranquility">Offenses Against Public Tranquility</option>
+                <option value="publicServants">Offenses by or Relating to Public Servants</option>
+                <option value="lawfulAuthority">Contempts of Lawful Authority of Public Servants</option>
+                <option value="elections">Offenses Relating to Elections</option>
+                <option value="falseEvidence">False Evidence and Offenses Against Public Justice</option>
+                <option value="coins">Offenses Relating to Coin and Government Stamps</option>
+                <option value="weights">Offenses Relating to Weights and Measures</option>
+                <option value="publicHealth">Offenses Affecting Public Health, Safety, Convenience, Decency, and Morals</option>
+                <option value="defamation">Defamation</option>
+                <option value="intimidation">Criminal Intimidation, Insult, and Annoyance</option>
+            </select>
+        </div>
+        <div id="lawInfo" class="law-info">
+            <h2>Law Details</h2>
+            <p>Select a category to view details about related laws.</p>
+        </div>
+    </main>
+    <footer>
+        <p>© 2025 Legal Information Portal. All Rights Reserved.</p>
+    </footer>
+    <script>
+        function displayLawInfo() {
+            const lawInfo = document.getElementById("lawInfo");
+            const selectedCategory = document.getElementById("lawDropdown").value;
+
+            let lawDetails = "";
+
+            switch (selectedCategory) {
+                case "state":
+                    lawDetails = `
+                        <h2>Offenses Against the State</h2>
+                        <ul>
+                            <li><b>Section 121:</b> Waging, or attempting to wage war, against the Government of India.</li>
+                            <li><b>Section 124A:</b> Sedition (offenses against the state).</li>
+                        </ul>`;
+                    break;
+                case "religion":
+                    lawDetails = `
+                        <h2>Offenses Relating to Religion</h2>
+                        <ul>
+                            <li><b>Section 295A:</b> Deliberate and malicious acts intended to outrage religious feelings.</li>
+                        </ul>`;
+                    break;
+                case "humanBody":
+                    lawDetails = `
+                        <h2>Offenses Against Human Body</h2>
+                        <ul>
+                            <li><b>Section 302:</b> Punishment for murder.</li>
+                            <li><b>Section 304:</b> Punishment for culpable homicide not amounting to murder.</li>
+                            <li><b>Section 376:</b> Punishment for rape.</li>
+                        </ul>`;
+                    break;
+                case "property":
+                    lawDetails = `
+                        <h2>Offenses Against Property</h2>
+                        <ul>
+                            <li><b>Section 379:</b> Punishment for theft.</li>
+                            <li><b>Section 392:</b> Punishment for robbery.</li>
+                            <li><b>Section 420:</b> Cheating and dishonestly inducing delivery of property.</li>
+                        </ul>`;
+                    break;
+                case "marriage":
+                    lawDetails = `
+                        <h2>Offenses Relating to Marriage</h2>
+                        <ul>
+                            <li><b>Section 494:</b> Marrying again during the lifetime of a spouse (bigamy).</li>
+                        </ul>`;
+                    break;
+                case "publicTranquility":
+                    lawDetails = `
+                        <h2>Offenses Against Public Tranquility</h2>
+                        <ul>
+                            <li><b>Section 141:</b> Unlawful assembly.</li>
+                            <li><b>Section 149:</b> Every member of unlawful assembly guilty of an offense committed in prosecution of a common object.</li>
+                        </ul>`;
+                    break;
+                case "publicServants":
+                    lawDetails = `
+                        <h2>Offenses by or Relating to Public Servants</h2>
+                        <ul>
+                            <li><b>Section 166:</b> Public servant disobeying law with intent to cause injury to any person.</li>
+                        </ul>`;
+                    break;
+                case "lawfulAuthority":
+                    lawDetails = `
+                        <h2>Contempts of Lawful Authority of Public Servants</h2>
+                        <ul>
+                            <li><b>Section 172:</b> Absconding to avoid service of summons or other proceedings.</li>
+                        </ul>`;
+                    break;
+                case "elections":
+                    lawDetails = `
+                        <h2>Offenses Relating to Elections</h2>
+                        <ul>
+                            <li><b>Section 171B:</b> Bribery during elections.</li>
+                        </ul>`;
+                    break;
+                case "falseEvidence":
+                    lawDetails = `
+                        <h2>False Evidence and Offenses Against Public Justice</h2>
+                        <ul>
+                            <li><b>Section 191:</b> Giving false evidence.</li>
+                        </ul>`;
+                    break;
+                case "coins":
+                    lawDetails = `
+                        <h2>Offenses Relating to Coin and Government Stamps</h2>
+                        <ul>
+                            <li><b>Section 232:</b> Counterfeiting Indian coin.</li>
+                        </ul>`;
+                    break;
+                case "weights":
+                    lawDetails = `
+                        <h2>Offenses Relating to Weights and Measures</h2>
+                        <ul>
+                            <li><b>Section 264:</b> Fraudulent use of false weights or measures.</li>
+                        </ul>`;
+                    break;
+                case "publicHealth":
+                    lawDetails = `
+                        <h2>Offenses Affecting Public Health, Safety, Convenience, Decency, and Morals</h2>
+                        <ul>
+                            <li><b>Section 268:</b> Public nuisance.</li>
+                        </ul>`;
+                    break;
+                case "defamation":
+                    lawDetails = `
+                        <h2>Defamation</h2>
+                        <ul>
+                            <li><b>Section 499:</b> Defamation definition and exceptions.</li>
+                        </ul>`;
+                    break;
+                case "intimidation":
+                    lawDetails = `
+                        <h2>Criminal Intimidation, Insult, and Annoyance</h2>
+                        <ul>
+                            <li><b>Section 503:</b> Criminal intimidation.</li>
+                        </ul>`;
+                    break;
+                default:
+                    lawDetails = `
+                        <h2>Law Details</h2>
+                        <p>Select a category to view details about related laws.</p>`;
+            }
+
+            lawInfo.innerHTML = lawDetails;
+        }
+    </script>
+</body>
+</html>
